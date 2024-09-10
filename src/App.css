@@ -1,0 +1,277 @@
+
+/* styles.css or similar file */
+.particles-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.particles-container .particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure particles are behind other content */
+  background: transparent; /* Ensure transparency */
+}
+
+.particles-container .content {
+  position: relative;
+  z-index: 1; /* Ensure content is above the particles */
+  padding: 20px; /* Adjust padding as needed */
+  color: #ffffff; /* Adjust text color for contrast */
+}
+
+.bg-transparent{
+  background-color: transparent !important;
+}
+
+.hero-shape {
+  position: absolute;
+  transition: transform 0.3s ease-out; 
+}
+
+
+
+/* Hide the mobile menu initially */
+.side-mobile-menu {
+  display: none;
+}
+
+/* Show the mobile menu when the 'open' class is added */
+.side-mobile-menu.open {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #282828; 
+  z-index: 999;
+  padding: 20px;
+}
+
+.body-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+/* Show the body overlay when the menu is open */
+.side-mobile-menu.open + .body-overlay {
+  display: block;
+}
+
+.close-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.mobile-menu a{
+  color: white !important;
+  text-decoration: none !important;
+  margin: 20px;
+  
+}
+.mobile-menu ul li {
+  margin: 20px;
+}
+/* Hide the main menu on small screens */
+@media (max-width: 991px) {
+  .main-menu {
+    display: none;
+  }
+
+  .mobile-m-bar {
+    display: block;
+  }
+  .mobile-menu a{
+    color: white !important;
+    text-decoration: none !important;
+    margin: 20px;
+  }
+  .mobile-menu ul li {
+    margin: 20px;
+  }
+}
+
+/* Hide the mobile menu and overlay on large screens */
+@media (min-width: 992px) {
+  .mobile-m-bar {
+    display: none;
+  }
+
+  .side-mobile-menu {
+    display: none;
+  }
+
+  .body-overlay {
+    display: none;
+  }
+  .mobile-menu a{
+    color: white !important;
+    text-decoration: none !important;
+    margin: 20px;
+  }
+  .mobile-menu ul li {
+    margin: 20px;
+  }
+}
+/* hide mobile bar icon */
+.mobile-menubar {
+  display: none;
+}
+.mobile-menubar Link{
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.hero-shape4{
+  margin-left: 20px !important;
+}
+/* hide home objects */
+@media (max-width: 500px) {
+#scene{
+  display: none;
+}
+.about-me-btn{
+  margin-right: 18px;
+}
+}
+
+@media (min-width: 180px) and (max-width: 998px){
+  .mobile-menubar {
+    display: block;
+  }
+}
+
+
+@media (min-width: 500px) {
+  #scene{
+    display: block;
+  }
+ 
+  }
+
+
+
+  /* footer */
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .footer-area {
+        padding-top: 0px !important;
+        /* margin-bottom: 0px; */
+    }
+}
+@media screen and (max-width: 767px) {
+  .footer-area {
+      padding-top: 0px;
+      /* margin-bottom: 25px; */
+  }
+}
+
+
+
+
+
+
+
+
+/* Preloader styles */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loadingCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loadingCenterAbsolute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.preloaderRotate img{
+  width: 100%;
+  height: 180px;
+}
+
+.preloaderRotate {
+  animation: preloaderRotate 1s linear infinite; 
+}
+
+@keyframes preloaderRotate  {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* @keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+} */
+
+
+.language-switch {
+  background: transparent;
+  color: white;
+
+}
+.language-switch select{
+  background: transparent;
+  color: white;
+  width: 100%;
+  padding: 4px 16px;
+  border: none;
+  border: 1px solid rgb(115, 115, 115);
+  background: transparent;
+
+  border-radius:6% ;
+}
+.language-switch select option{
+  background: black !important;
+  color: white;
+  width: 100%;
+  padding: 4px 16px;
+}
